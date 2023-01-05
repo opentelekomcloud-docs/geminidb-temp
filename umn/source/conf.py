@@ -24,7 +24,7 @@ extensions = [
 otcdocs_auto_name = False
 otcdocs_auto_version = False
 
-project = 'GaussDB Distributed Multi-model NoSQL Database'
+project = 'GaussDB NoSQL'
 otcdocs_repo_name = 'opentelekomcloud-docs/gaussdb-nosql'
 # Those variables are required for edit/bug links
 
@@ -81,7 +81,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "GaussDB Distributed Multi-model NoSQL Database - User Guide"
+html_title = "GaussDB NoSQL - User Guide"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -93,6 +93,6 @@ html_static_path = ['_static']
 latex_documents = [
     ('index',
      'gauss_nosql.tex',
-     u'GaussDB Distributed Multi-model NoSQL Database - User Guide',
+     u'GaussDB NoSQL - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
