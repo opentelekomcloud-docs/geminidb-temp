@@ -18,17 +18,26 @@ import os
 import sys
 
 extensions = [
-    'otcdocstheme'
+    'otcdocstheme',
 ]
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
 
-project = 'GaussDB Distributed Multi-model NoSQL Database'
+project = 'GaussDB NoSQL'
 otcdocs_repo_name = 'opentelekomcloud-docs/gaussdb-nosql'
 # Those variables are required for edit/bug links
 
-
+# Those variables are needed for indexing into OpenSearch
+otcdocs_doc_environment = 'public'
+otcdocs_doc_link = '/gaussdb_nosql/api-ref/'
+otcdocs_doc_title = 'API Reference'
+otcdocs_doc_type = 'api-ref'
+otcdocs_service_category = 'database'
+otcdocs_service_title = 'GaussDB NoSQL'
+otcdocs_service_type = 'gaussdb_nosql'
+otcdocs_search_environment = 'hc_de'
+otcdocs_search_url = "https://opensearch.eco.tsi-dev.otc-service.com/"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -38,6 +47,9 @@ sys.path.insert(0, os.path.abspath('../'))
 sys.path.insert(0, os.path.abspath('./'))
 
 # -- General configuration ----------------------------------------------------
+# https://docutils.sourceforge.io/docs/user/smartquotes.html - it does not
+# what it is expected
+smartquotes = False
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -80,7 +92,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "GaussDB Distributed Multi-model NoSQL Database - API Reference"
+html_title = "GaussDB NoSQL - API Reference"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -88,10 +100,13 @@ html_title = "GaussDB Distributed Multi-model NoSQL Database - API Reference"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Do not include sources into the rendered results
+html_copy_source = False
+
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
-('index',
-     'gauss_nosql.tex',
-     u'GaussDB Distributed Multi-model NoSQL Database - API Reference',
+    ('index',
+     'gaussdb_nosql-api-ref.tex',
+     u'GaussDB NoSQL - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
