@@ -39,7 +39,7 @@ Method 2
 
 #. View the results on the **Instance Management** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001158064901.png
-.. |image2| image:: /_static/images/en-us_image_0000001158064897.png
-.. |image3| image:: /_static/images/en-us_image_0000001111385068.png
-.. |image4| image:: /_static/images/en-us_image_0000001158064899.png
+.. |image1| image:: /_static/images/en-us_image_0000001139129107.png
+.. |image2| image:: /_static/images/en-us_image_0000001139224555.png
+.. |image3| image:: /_static/images/en-us_image_0000001092187298.png
+.. |image4| image:: /_static/images/en-us_image_0000001092058816.png

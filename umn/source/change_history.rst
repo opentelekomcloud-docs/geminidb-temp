@@ -5,38 +5,26 @@
 Change History
 ==============
 
-+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Released On                       | Description                                                                                                                                                            |
-+===================================+========================================================================================================================================================================+
-| 2020-11-30                        | Added the following content:                                                                                                                                           |
-|                                   |                                                                                                                                                                        |
-|                                   | Added monitoring metrics in :ref:`GaussDB(for Cassandra) Monitoring Metrics <nosql_03_0011>`.                                                                          |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported setting alarm rules in :ref:`Setting Alarm Rules <nosql_03_0012>`.                                                                                           |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported viewing monitoring metrics in :ref:`Viewing Metrics <nosql_03_0013>`.                                                                                        |
-+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2020-08-30                        | Added the following content:                                                                                                                                           |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported binding and unbinding an EIP in :ref:`Binding an EIP <nosql_02_0008>`.                                                                                       |
-|                                   |                                                                                                                                                                        |
-|                                   | Added support for connecting to a DB instance through a public network in :ref:`Connecting to a GaussDB(for Cassandra) Instance Over Public Networks <nosql_02_0009>`. |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported changing the administrator password in :ref:`Resetting the Administrator Password <nosql_03_0016>`.                                                          |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported restart of a DB instance :ref:`Restarting a DB Instance <nosql_03_0003>`.                                                                                    |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported node scale-out in :ref:`Adding Nodes <nosql_increase_nodes>`.                                                                                                |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported storage capacity expansion in :ref:`Scaling Up Storage Space <nosql_increase_storage>`.                                                                      |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported changing specifications in :ref:`Changing a DB Instance Class <nosql_03_0026>`.                                                                              |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported node scale-in in :ref:`Deleting Nodes <nosql_03_0004>`.                                                                                                      |
-|                                   |                                                                                                                                                                        |
-|                                   | Added the parameter template in :ref:`Parameter Template Management <nosql_05_0001>`.                                                                                  |
-|                                   |                                                                                                                                                                        |
-|                                   | Supported the query of slow query logs in :ref:`Slow Query Logs <nosql_03_0028>`.                                                                                      |
-+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2020-06-30                        | This issue is the first official release.                                                                                                                              |
-+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Released On                       | Description                                                                                                                                              |
++===================================+==========================================================================================================================================================+
+| 2020-07-31                        | This issue is the fifth official release, which incorporates the following change:                                                                       |
+|                                   |                                                                                                                                                          |
+|                                   | In :ref:`Managing Tags <nosql_03_0014>`, a tag key can contain the at sign (@). A tag value can contain the at sign (@), but cannot contain periods (.). |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2023-02-10                        | This issue is the fourth official release, which incorporates the following change:                                                                      |
+|                                   |                                                                                                                                                          |
+|                                   | Instance specifications 24 vCPUs \| 192 GB, and 48 vCPUs \| 384 GB in :ref:`Table 1 <nosql_01_0006__table33151750124715>`                                |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2020-11-30                        | This issue is the third official release, which incorporates the following changes:                                                                      |
+|                                   |                                                                                                                                                          |
+|                                   | :ref:`GaussDB(for Cassandra) Monitoring Metrics <nosql_03_0011>`                                                                                         |
+|                                   |                                                                                                                                                          |
+|                                   | :ref:`Setting Alarm Rules <nosql_03_0012>`                                                                                                               |
+|                                   |                                                                                                                                                          |
+|                                   | :ref:`Viewing Metrics <nosql_03_0013>`                                                                                                                   |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2020-08-30                        | This issue is the second official release.                                                                                                               |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2020-06-30                        | This issue is the first official release.                                                                                                                |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+

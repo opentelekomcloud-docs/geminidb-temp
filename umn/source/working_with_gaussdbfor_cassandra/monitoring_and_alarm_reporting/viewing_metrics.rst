@@ -38,4 +38,4 @@ Procedure
 
    To view the monitoring curve in a longer time range, click |image1| to enlarge the graph.
 
-.. |image1| image:: /_static/images/en-us_image_0000001111385042.png
+.. |image1| image:: /_static/images/en-us_image_0000001092506886.png

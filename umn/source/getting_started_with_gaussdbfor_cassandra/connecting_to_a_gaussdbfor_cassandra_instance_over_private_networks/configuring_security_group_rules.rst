@@ -18,7 +18,7 @@ The following describes how to set security groups.
 -  If the ECS and DB instance are in the same security group, they can communicate with each other by default. No security group rule needs to be configured.
 -  If the ECS and DB instance are in different security groups, you need to configure security group rules for the ECS and DB instance separately.
 
-   -  To allow access to the GaussDB(for Cassandra) instance, you need to configure an inbound rule for the security group where the instance resides.
+   -  To allow access to the GaussDB(for Cassandra) instance, you need to configure an inbound rule for the security group that the instance nodes belong to.
    -  By default, the security group allows all outbound data packets, so you do not need to configure a security rule for the ECS. If not all access from the ECS is allowed, you need to configure an outbound rule for the ECS.
 
 -  By default, you can create up to 500 security group rules. However, too many rules increase network latency for initial access, so it is recommended that you add no more than 50 rules for each security group.
@@ -35,4 +35,4 @@ Procedure
 #. In the displayed dialog box, set required parameters.
 #. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001158104939.png
+.. |image1| image:: /_static/images/en-us_image_0000001092346948.png

@@ -19,4 +19,4 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. In the service list, choose **Database** > **GaussDB NoSQL**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001111544820.png
+.. |image1| image:: /_static/images/en-us_image_0000001092187390.png

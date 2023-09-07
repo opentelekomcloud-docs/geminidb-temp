@@ -5,7 +5,7 @@
 Managing Manual Backups
 =======================
 
-To ensure data reliability, GaussDB NoSQL allows you to manually back up DB instances whose status is **Available**. If a database or table is deleted, maliciously or accidentally, backups can help recover your data.
+To ensure data reliability, GaussDB(for Cassandra) allows you to manually back up DB instances whose status is **Available**. If a database or table is deleted, maliciously or accidentally, backups can help recover your data.
 
 .. note::
 
@@ -21,7 +21,7 @@ Creating a Manual Backup
 
    **Method 1**
 
-   On the **Instance Management** page, locate the DB instance you wish to back up and click **Create Backup** or **More > Create Backup** in the **Operation** column.
+   On the **Instance Management** page, locate the DB instance you wish to back up and click **Create Backup** or **More** > **Create Backup** in the **Operation** column.
 
    **Method 2**
 

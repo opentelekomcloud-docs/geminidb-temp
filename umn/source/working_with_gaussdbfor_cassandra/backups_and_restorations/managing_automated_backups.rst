@@ -5,7 +5,7 @@
 Managing Automated Backups
 ==========================
 
-GaussDB NoSQL creates automated backups to ensure data reliability. If a database or table is maliciously or accidentally deleted, backups can help you ensure you do not lose your data.
+GaussDB(for Cassandra) creates automated backups to ensure data reliability. If a database or table is maliciously or accidentally deleted, backups can help you ensure you do not lose your data.
 
 .. _nosql_03_0007__section7348925133816:
 
@@ -91,4 +91,4 @@ If the automated backup policy is enabled, the system will delete automated back
    #. On the **Backup Management** page, locate the target backup and click **Delete**.
    #. In the **Delete Backup** dialog box, confirm the backup information and click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001158064793.png
+.. |image1| image:: /_static/images/en-us_image_0000001139129197.png

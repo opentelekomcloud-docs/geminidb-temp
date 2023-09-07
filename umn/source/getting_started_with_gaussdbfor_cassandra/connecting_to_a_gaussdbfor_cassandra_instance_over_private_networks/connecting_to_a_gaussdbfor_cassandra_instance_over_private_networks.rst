@@ -31,6 +31,7 @@ Prerequisites
 
 -  Create an ECS running Linux. For details, see "Creating ECSs" in *ECS User Guide*.
 -  Obtain the Cassandra client installation package from the Cassandra official website.
+-  Before using this tool, install the Python dependency package `cassandra-driver <https://pypi.org/project/cassandra-driver/>`__ 3.11.0 or later.
 
 Using the Cassandra Client Tool to Connect to a DB Instance
 -----------------------------------------------------------
@@ -43,11 +44,11 @@ Using the Cassandra Client Tool to Connect to a DB Instance
 
 #. Connect to the DB instance in the directory where the cqlsh tool is located.
 
-   **cqlsh** <*DB_HOST*> <*DB_PORT*> **-u** <*DB_USER*>
+   **./cqlsh** <*DB_HOST*> <*DB_PORT*> **-u** <*DB_USER*>
 
    Example:
 
-   **cqlsh 192.168.1.8 8635 -u rwuser**
+   **./cqlsh 192.168.1.8 8635 -u rwuser**
 
    .. note::
 

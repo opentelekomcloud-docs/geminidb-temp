@@ -8,7 +8,7 @@ Restoring Data to a New DB Instance
 Scenarios
 ---------
 
-GaussDB NoSQL helps you to restore the existing backup to a new DB instance.
+GaussDB(for Cassandra) allows you to restore the existing backup to a new DB instance.
 
 Procedure
 ---------

@@ -21,6 +21,6 @@ Procedure
    -  After you submit the modification, you can view the new description in the **Description** column on the **Parameter Template Management** page.
    -  The description can include up to 256 characters but cannot contain the following special characters: >!<"&'=
 
-.. |image1| image:: /_static/images/en-us_image_0000001158104849.png
-.. |image2| image:: /_static/images/en-us_image_0000001111544870.png
-.. |image3| image:: /_static/images/en-us_image_0000001158104851.png
+.. |image1| image:: /_static/images/en-us_image_0000001139224635.png
+.. |image2| image:: /_static/images/en-us_image_0000001092347040.png
+.. |image3| image:: /_static/images/en-us_image_0000001138926357.png

@@ -10,6 +10,7 @@ Working with GaussDB(for Cassandra)
 -  :ref:`Backups and Restorations <nosql_03_0006>`
 -  :ref:`Parameter Template Management <nosql_05_0001>`
 -  :ref:`Monitoring and Alarm Reporting <nosql_03_0010>`
+-  :ref:`Auditing <nosql_03_0019>`
 -  :ref:`Log Management <nosql_03_0027>`
 
 .. toctree::
@@ -21,4 +22,5 @@ Working with GaussDB(for Cassandra)
    backups_and_restorations/index
    parameter_template_management/index
    monitoring_and_alarm_reporting/index
+   auditing/index
    log_management/index
