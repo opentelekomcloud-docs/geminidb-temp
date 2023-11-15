@@ -65,8 +65,8 @@ Response Parameters
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------+
    | success               | Boolean               | Whether the task for applying the parameter template is successfully submitted. The value can be: |
    |                       |                       |                                                                                                   |
-   |                       |                       | -  **true**: indicates the task is successfully submitted.                                        |
-   |                       |                       | -  **false**: indicates the task fails to be submitted.                                           |
+   |                       |                       | -  **true**, indicating the task is successfully submitted.                                       |
+   |                       |                       | -  **false**, indicating the task fails to be submitted.                                          |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------+
 
 Example Requests

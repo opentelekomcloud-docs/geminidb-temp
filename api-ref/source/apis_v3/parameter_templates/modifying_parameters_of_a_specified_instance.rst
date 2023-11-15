@@ -60,16 +60,16 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                              |
-   +=======================+=======================+==========================================================================+
-   | job_id                | String                | ID of the asynchronous task for modifying instance parameters            |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
-   | restart_required      | Boolean               | Whether the instance needs to be restarted. The value can be:            |
-   |                       |                       |                                                                          |
-   |                       |                       | -  **true**: indicates that the instance needs to be restarted.          |
-   |                       |                       | -  **false**: indicates that the instance does not need to be restarted. |
-   +-----------------------+-----------------------+--------------------------------------------------------------------------+
+   +-----------------------+-----------------------+---------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                               |
+   +=======================+=======================+===========================================================================+
+   | job_id                | String                | ID of the asynchronous task for modifying instance parameters             |
+   +-----------------------+-----------------------+---------------------------------------------------------------------------+
+   | restart_required      | Boolean               | Whether the instance needs to be restarted. The value can be:             |
+   |                       |                       |                                                                           |
+   |                       |                       | -  **true**, indicating that the instance needs to be restarted.          |
+   |                       |                       | -  **false**, indicating that the instance does not need to be restarted. |
+   +-----------------------+-----------------------+---------------------------------------------------------------------------+
 
 Example Requests
 ----------------

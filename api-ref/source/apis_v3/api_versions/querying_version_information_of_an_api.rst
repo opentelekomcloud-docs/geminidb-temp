@@ -81,8 +81,8 @@ Response Parameters
    | rel       | String | The value is **self**, indicating that URL is a local link. |
    +-----------+--------+-------------------------------------------------------------+
 
-Request Example
----------------
+Example Requests
+----------------
 
 URI example
 

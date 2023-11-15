@@ -85,13 +85,13 @@ Response Parameters
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
    | restart_required      | Boolean               | Whether the instance needs to be restarted. The value can be:                                                                                   |
    |                       |                       |                                                                                                                                                 |
-   |                       |                       | -  **false**: indicates that the instance does not need to be restarted.                                                                        |
-   |                       |                       | -  **true**: indicates that the instance needs to be restarted.                                                                                 |
+   |                       |                       | -  **false**, indicating that the instance does not need to be restarted.                                                                       |
+   |                       |                       | -  **true**, indicating that the instance needs to be restarted.                                                                                |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
    | readonly              | Boolean               | Whether the parameter is read-only. The value can be:                                                                                           |
    |                       |                       |                                                                                                                                                 |
-   |                       |                       | -  **false**: indicates that the parameter is not read-only.                                                                                    |
-   |                       |                       | -  **true**: indicates that the parameter is read-only.                                                                                         |
+   |                       |                       | -  **false**, indicating that the parameter is not read-only.                                                                                   |
+   |                       |                       | -  **true**, indicating that the parameter is read-only.                                                                                        |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
    | value_range           | String                | Value range. For example, the value of the Integer type ranges from **0** to **1**, and the value of the Boolean type is **true** or **false**. |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+

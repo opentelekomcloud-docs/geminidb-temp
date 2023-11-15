@@ -29,7 +29,7 @@ GET https://{Endpoint}/v3/{project_id}/datastores/{datastore_name}/versions
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+
    | datastore_name  | Yes             | String          | Database type. The value can be:                                                                               |
    |                 |                 |                 |                                                                                                                |
-   |                 |                 |                 | -  **cassandra**: indicates that the instances are of the GaussDB(for Cassandra) type.                         |
+   |                 |                 |                 | -  **cassandra**, indicating that the instances are of the GaussDB(for Cassandra) type.                        |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
