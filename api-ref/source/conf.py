@@ -30,7 +30,7 @@ otcdocs_repo_name = 'opentelekomcloud-docs/gaussdb-nosql'
 
 # Those variables are needed for indexing into OpenSearch
 otcdocs_doc_environment = 'public'
-otcdocs_doc_link = '/gaussdb_nosql/api-ref/'
+otcdocs_doc_link = '/gaussdb-nosql/api-ref/'
 otcdocs_doc_title = 'API Reference'
 otcdocs_doc_type = 'api-ref'
 otcdocs_service_category = 'database'
