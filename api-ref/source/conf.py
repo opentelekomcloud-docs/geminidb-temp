@@ -92,7 +92,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "GaussDB NoSQL - API Reference"
+html_title = "GeminiDB - API Reference"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -106,7 +106,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'gaussdb_nosql-api-ref.tex',
-     u'GaussDB NoSQL - API Reference',
+     'geminidb-api-ref.tex',
+     u'GeminiDB - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
