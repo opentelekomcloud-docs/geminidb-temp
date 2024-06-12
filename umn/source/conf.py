@@ -92,7 +92,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "GaussDB NoSQL - User Guide"
+html_title = "GeminiDB - User Guide"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -106,7 +106,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'gauss_nosql.tex',
-     u'GaussDB NoSQL - User Guide',
+     'geminidb-umn.tex',
+     u'GeminiDB - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
