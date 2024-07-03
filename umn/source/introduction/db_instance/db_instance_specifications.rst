@@ -9,12 +9,12 @@ DB Instance Specifications
 
    The DB instance specifications depend on the selected DB engine.
 
-GaussDB(for Cassandra) Instance Specifications
-----------------------------------------------
+GeminiDB Cassandra Instance Specifications
+------------------------------------------
 
 .. _nosql_01_0006__table33151750124715:
 
-.. table:: **Table 1** GaussDB(for Cassandra) cluster instance specifications
+.. table:: **Table 1** GeminiDB Cassandra cluster instance specifications
 
    ============================= ===== =========== =======================
    Flavor                        vCPUs Memory (GB) Max. Storage Space (GB)

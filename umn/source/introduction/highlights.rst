@@ -19,7 +19,7 @@ High Security
 
 **Network isolation**
 
-GaussDB NoSQL uses Virtual Private Clouds (VPCs) and network security groups to keep DB instances isolated. VPCs allow you to define which IP addresses are allowed to access a given database. Running a DB instance in a VPC improves security. To further enhance database security, you can configure subnets and security groups to control access to DB instances.
+GeminiDB uses Virtual Private Clouds (VPCs) and network security groups to keep DB instances isolated. VPCs allow you to define which IP addresses are allowed to access a given database. Running a DB instance in a VPC improves security. To further enhance database security, you can configure subnets and security groups to control access to DB instances.
 
 **Access control**
 
@@ -27,19 +27,19 @@ VPC security groups can be configured with rules to control traffic to and from 
 
 **Encryption**
 
-GaussDB NoSQL uses Secure Sockets Layer (SSL) to encrypt transmitted data. You can download the root CA certificate from the management console and upload it for authentication when connecting to a database.
+GeminiDB uses Secure Sockets Layer (SSL) to encrypt transmitted data. You can download the root CA certificate from the management console and upload it for authentication when connecting to a database.
 
 **Security**
 
-GaussDB NoSQL supports multi-layer network protection. The security system consists of VPCs, subnets, security groups, Anti-DDoS, and SSL, which collectively can defend against a wide range of attacks and keep your data secure.
+GeminiDB supports multi-layer network protection. The security system consists of VPCs, subnets, security groups, Anti-DDoS, and SSL, which collectively can defend against a wide range of attacks and keep your data secure.
 
 -  VPCs isolate resources and control access.
 -  SSL connections ensure data security and integrity.
--  Security group rules control traffic to and from specific IP addresses and ports, protecting connections between GaussDB NoSQL and other services.
+-  Security group rules control traffic to and from specific IP addresses and ports, protecting connections between GeminiDB and other services.
 
 **Performance monitoring**
 
-GaussDB NoSQL monitors instance performance, reducing 60% of O&M activities. It provides real-time monitoring information about CPU utilization, disk usage, IOPS, and number of active connections, allowing you to check instance status at any time.
+GeminiDB monitors instance performance, reducing 60% of O&M activities. It provides real-time monitoring information about CPU utilization, disk usage, IOPS, and number of active connections, allowing you to check instance status at any time.
 
 Convenience
 -----------
@@ -51,4 +51,4 @@ You can create a DB instance on the management console and access the database o
 Scalability
 -----------
 
-As a distributed database service with decoupled compute and storage architecture, GaussDB NoSQL supports minute-level compute node expansion and second-level storage expansion.
+As a distributed database service with decoupled compute and storage architecture, GeminiDB supports minute-level compute node expansion and second-level storage expansion.

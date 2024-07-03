@@ -5,7 +5,7 @@
 Introduction
 ============
 
--  :ref:`What Is GaussDB NoSQL? <nosql_introduction>`
+-  :ref:`What Is GeminiDB? <nosql_introduction>`
 -  :ref:`System Architecture <nosql_01_0001>`
 -  :ref:`Highlights <nosql_01_0002>`
 -  :ref:`Typical Application Scenarios <nosql_01_0010>`
@@ -18,7 +18,7 @@ Introduction
    :maxdepth: 1
    :hidden: 
 
-   what_is_gaussdb_nosql
+   what_is_geminidb
    system_architecture
    highlights
    typical_application_scenarios

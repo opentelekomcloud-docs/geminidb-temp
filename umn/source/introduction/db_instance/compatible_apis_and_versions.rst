@@ -5,7 +5,7 @@
 Compatible APIs and Versions
 ============================
 
-This section lists the GaussDB NoSQL-compatible APIs and versions.
+This section lists the GeminiDB-compatible APIs and versions.
 
 .. table:: **Table 1** Compatible APIs and versions
 
