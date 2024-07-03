@@ -8,17 +8,21 @@ Change History
 +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Released On                       | Description                                                                                                                                              |
 +===================================+==========================================================================================================================================================+
+| 2024-04-30                        | This issue is the sixth official release.                                                                                                                |
+|                                   |                                                                                                                                                          |
+|                                   | GaussDB NoSQL is changed to GeminiDB.                                                                                                                    |
++-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2020-07-31                        | This issue is the fifth official release, which incorporates the following change:                                                                       |
 |                                   |                                                                                                                                                          |
 |                                   | In :ref:`Managing Tags <nosql_03_0014>`, a tag key can contain the at sign (@). A tag value can contain the at sign (@), but cannot contain periods (.). |
 +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2023-02-10                        | This issue is the fourth official release, which incorporates the following change:                                                                      |
+| 2020-02-10                        | This issue is the fourth official release, which incorporates the following change:                                                                      |
 |                                   |                                                                                                                                                          |
 |                                   | Instance specifications 24 vCPUs \| 192 GB, and 48 vCPUs \| 384 GB in :ref:`Table 1 <nosql_01_0006__table33151750124715>`                                |
 +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2020-11-30                        | This issue is the third official release, which incorporates the following changes:                                                                      |
 |                                   |                                                                                                                                                          |
-|                                   | :ref:`GaussDB(for Cassandra) Monitoring Metrics <nosql_03_0011>`                                                                                         |
+|                                   | :ref:`GeminiDB Cassandra Metrics <nosql_03_0011>`                                                                                                        |
 |                                   |                                                                                                                                                          |
 |                                   | :ref:`Setting Alarm Rules <nosql_03_0012>`                                                                                                               |
 |                                   |                                                                                                                                                          |

@@ -1,13 +1,12 @@
-==========================
-GaussDB NoSQL - User Guide
-==========================
+=====================
+GeminiDB - User Guide
+=====================
 
 .. toctree::
    :maxdepth: 1
 
    introduction/index
-   logging_in_to_the_gaussdb_nosql_console
-   getting_started_with_gaussdbfor_cassandra/index
-   working_with_gaussdbfor_cassandra/index
-   faqs/index
+   logging_in_to_the_geminidb_console
+   getting_started_with_geminidb_cassandra/index
+   working_with_geminidb_cassandra_api/index
    change_history

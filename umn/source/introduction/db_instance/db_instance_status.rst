@@ -36,7 +36,11 @@ You can determine whether a DB instance is healthy based on its status displayed
    +-------------------------+-------------------------------------------------------------------------------+
    | Changing instance class | The CPU or memory of a DB instance is being changed.                          |
    +-------------------------+-------------------------------------------------------------------------------+
+   | Uploading backup        | The backup file is being uploaded.                                            |
+   +-------------------------+-------------------------------------------------------------------------------+
    | Backing up              | Backup is being created.                                                      |
    +-------------------------+-------------------------------------------------------------------------------+
    | Checking restoration    | The backup of the current DB instance is being restored to a new DB instance. |
+   +-------------------------+-------------------------------------------------------------------------------+
+   | Switching SSL           | SSL is being enabled or disabled.                                             |
    +-------------------------+-------------------------------------------------------------------------------+
