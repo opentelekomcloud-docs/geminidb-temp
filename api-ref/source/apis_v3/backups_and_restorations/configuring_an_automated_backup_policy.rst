@@ -13,7 +13,7 @@ This API is used to configuring an automated backup policy.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -27,7 +27,7 @@ PUT https://{Endpoint}/v3/{project_id}/instances/{instance_id}/backups/policy
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -38,21 +38,21 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                          |
-   +=================+=================+==================+======================================================================================================================================================================================+
-   | backup_policy   | Yes             | object           | Backup policy objects, including backup retention period (days) and start time For details, see :ref:`Table 4 <nosql_api_0031__request_backuppolicy>`.                               |
-   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | database_tables | No              | Array of objects | Database and table information in the backup policy. This parameter is available only to GaussDB(for Cassandra). For details, see :ref:`Table 5 <nosql_api_0031__table53208596452>`. |
-   |                 |                 |                  |                                                                                                                                                                                      |
-   |                 |                 |                  | -  If this parameter is empty, an automated backup policy for an instance is set.                                                                                                    |
-   |                 |                 |                  | -  If this parameter is not empty, an automated backup policy for a databases or table is set.                                                                                       |
-   +-----------------+-----------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type             | Description                                                                                                                                                                      |
+   +=================+=================+==================+==================================================================================================================================================================================+
+   | backup_policy   | Yes             | object           | Backup policy objects, including backup retention period (days) and start time For details, see :ref:`Table 4 <nosql_api_0031__request_backuppolicy>`.                           |
+   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | database_tables | No              | Array of objects | Database and table information in the backup policy. This parameter is available only to GeminiDB Cassandra. For details, see :ref:`Table 5 <nosql_api_0031__table53208596452>`. |
+   |                 |                 |                  |                                                                                                                                                                                  |
+   |                 |                 |                  | -  If this parameter is empty, an automated backup policy for an instance is set.                                                                                                |
+   |                 |                 |                  | -  If this parameter is not empty, an automated backup policy for a databases or table is set.                                                                                   |
+   +-----------------+-----------------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _nosql_api_0031__request_backuppolicy:
 
@@ -89,7 +89,7 @@ Request Parameters
    +-----------------+-----------------+------------------+-------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type             | Description                                                                         |
    +=================+=================+==================+=====================================================================================+
-   | database_name   | Yes             | String           | Database name                                                                       |
+   | database_name   | Yes             | String           | Database name.                                                                      |
    +-----------------+-----------------+------------------+-------------------------------------------------------------------------------------+
    | table_names     | No              | Array of strings | Table names.                                                                        |
    |                 |                 |                  |                                                                                     |

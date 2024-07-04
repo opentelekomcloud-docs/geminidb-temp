@@ -13,7 +13,7 @@ This API is used to query the latest 2,000 slow query logs of an instance. Searc
 Constraints
 -----------
 
--  This API supports GaussDB(for Cassandra) instances.
+-  This API supports GeminiDB Cassandra instances.
 -  This API can be used to query only the latest 2000 slow query logs in a specified time range.
 
 URI
@@ -73,7 +73,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 Response Parameters
@@ -83,27 +83,27 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +---------------+------------------------------------------------------------------------------+-----------------------------------+
-   | Parameter     | Type                                                                         | Description                       |
-   +===============+==============================================================================+===================================+
-   | slow_log_list | Array of :ref:`SlowlogResult <listslowlogs__response_slowlogresult>` objects | Information about slow query logs |
-   +---------------+------------------------------------------------------------------------------+-----------------------------------+
-   | total_record  | Integer                                                                      | Total number of records           |
-   +---------------+------------------------------------------------------------------------------+-----------------------------------+
+   +---------------+------------------------------------------------------------------------------+------------------------------------+
+   | Parameter     | Type                                                                         | Description                        |
+   +===============+==============================================================================+====================================+
+   | slow_log_list | Array of :ref:`SlowlogResult <listslowlogs__response_slowlogresult>` objects | Information about slow query logs. |
+   +---------------+------------------------------------------------------------------------------+------------------------------------+
+   | total_record  | Integer                                                                      | Total number of records.           |
+   +---------------+------------------------------------------------------------------------------+------------------------------------+
 
 .. _listslowlogs__response_slowlogresult:
 
 .. table:: **Table 5** SlowlogResult
 
-   ============ ====== ========================================
+   ============ ====== =========================================
    Parameter    Type   Description
-   ============ ====== ========================================
-   time         String Execution time
-   database     String Database which slow query logs belong to
-   query_sample String Execution syntax
-   type         String SQL statement type
-   start_time   String UTC time when logs are generated
-   ============ ====== ========================================
+   ============ ====== =========================================
+   time         String Execution time.
+   database     String Database which slow query logs belong to.
+   query_sample String Execution syntax.
+   type         String SQL statement type.
+   start_time   String UTC time when logs are generated.
+   ============ ====== =========================================
 
 Example Requests
 ----------------

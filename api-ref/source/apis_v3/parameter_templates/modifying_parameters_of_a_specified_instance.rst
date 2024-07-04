@@ -13,7 +13,7 @@ This API is used to modify parameters of a specified instance.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 For configuration item **values**, you can enter system-defined parameters that allow for modification.
 
@@ -31,7 +31,7 @@ PUT https://{Endpoint}/v3/{project_id}/instances/{instance_id}/configurations
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -42,16 +42,16 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------+-----------+--------------------+-------------------------------------------------------------------------+
-   | Parameter | Mandatory | Type               | Description                                                             |
-   +===========+===========+====================+=========================================================================+
-   | values    | Yes       | Map<String,String> | Parameter values defined by users based on a default parameter template |
-   +-----------+-----------+--------------------+-------------------------------------------------------------------------+
+   +-----------+-----------+--------------------+--------------------------------------------------------------------------+
+   | Parameter | Mandatory | Type               | Description                                                              |
+   +===========+===========+====================+==========================================================================+
+   | values    | Yes       | Map<String,String> | Parameter values defined by users based on a default parameter template. |
+   +-----------+-----------+--------------------+--------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -63,7 +63,7 @@ Response Parameters
    +-----------------------+-----------------------+---------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                               |
    +=======================+=======================+===========================================================================+
-   | job_id                | String                | ID of the asynchronous task for modifying instance parameters             |
+   | job_id                | String                | ID of the asynchronous task for modifying instance parameters.            |
    +-----------------------+-----------------------+---------------------------------------------------------------------------+
    | restart_required      | Boolean               | Whether the instance needs to be restarted. The value can be:             |
    |                       |                       |                                                                           |
@@ -78,7 +78,7 @@ Example Requests
 
    .. code-block:: text
 
-      PUT https://{Endpoint}/v3/054e292c9880d4992f02c0196d3ea468/instances/3d39c18788b54a919bab633874c159dfin01/configurations
+      PUT https://{Endpoint}/v3/054e292c9880d4992f02c0196d3ea468/instances/392850e624504e1490901d50b585a60din06/configurations
 
 -  Modifying Parameters of a Specified Instance
 
@@ -86,7 +86,7 @@ Example Requests
 
       {
         "values" : {
-          "concurrent_reads" : "64"
+          "request_timeout_in_ms" : "10000"
         }
       }
 

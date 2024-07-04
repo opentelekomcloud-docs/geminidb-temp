@@ -7,13 +7,13 @@ Concepts
 
 -  Account
 
-   An account is generated after your registration. The account has full access permissions for all the resources and cloud services in it. You can use it to reset user passwords and grant users permissions. The account is a payment entity, which should not be used directly to perform routine management. To ensure account security, create IAM users and grant them permissions for routine management.
+   A domain is created upon successful registration. The domain has full access permissions for all of its cloud services and resources. It can be used to reset user passwords and grant user permissions. The account is a payment entity and should not be used directly to perform routine management. For security purposes, create users and grant them permissions for routine management.
 
 -  IAM User
 
    An IAM user is created using an account to use cloud services. Each IAM user has its own identity credentials (password and access keys).
 
-   The account name, username, and password will be required for API authentication.
+   API authentication requires information such as the account name, username, and password.
 
 -  Region
 

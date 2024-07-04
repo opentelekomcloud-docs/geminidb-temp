@@ -1,24 +1,28 @@
-:original_name: nosql_05_0050.html
+:original_name: nosql_05_0103.html
 
-.. _nosql_05_0050:
+.. _nosql_05_0103:
 
-Scaling Up Storage Space of an Instance
-=======================================
+Changing the Security Group of an Instance
+==========================================
 
 Function
 --------
 
-This API is used to scale up storage space of an instance.
+This API is used to change the security group associated with an instance.
 
 Constraints
 -----------
 
 This API supports GeminiDB Cassandra instances.
 
+Abnormal instances do not support this operation.
+
+Please confirm the modified security group rule. This policy may affect connections to the current instance, interrupting services.
+
 URI
 ---
 
-POST https://{Endpoint}/v3/{project_id}/instances/{instance_id}/extend-volume
+PUT https://{Endpoint}/v3/{project_id}/instances/{instance_id}/security-group
 
 .. table:: **Table 1** Path parameters
 
@@ -43,13 +47,11 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                            |
-   +=================+=================+=================+========================================================================================+
-   | size            | Yes             | Integer         | Requested storage space. It must be an integer greater than the current storage space. |
-   |                 |                 |                 |                                                                                        |
-   |                 |                 |                 | The maximum storage space depends on the API type and specifications.                  |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------+
+   ================= ========= ====== =============================
+   Parameter         Mandatory Type   Description
+   ================= ========= ====== =============================
+   security_group_id Yes       String ID of the new security group.
+   ================= ========= ====== =============================
 
 Response Parameters
 -------------------
@@ -71,14 +73,14 @@ Example Requests
 
    .. code-block:: text
 
-      POST https://{Endpoint}/v3/375d8d8fad1f43039e23d3b6c0f60a19/instances/9136fd2a9fcd405ea4674276ce36dae8in06/extend-volume
+      PUT https://{Endpoint}/v3/375d8d8fad1f43039e23d3b6c0f60a19/instances/9136fd2a9fcd405ea4674276ce36dae8in02/security-group
 
--  Scaling up storage space of an instance to 550 GB
+-  Example request body
 
    .. code-block::
 
       {
-        "size" : 550
+        "security_group_id" : "73bed21a-708b-4985-b697-a96d0e0d2b39"
       }
 
 Example Responses
@@ -86,12 +88,12 @@ Example Responses
 
 **Status code: 202**
 
-Accepted
+No Content
 
 .. code-block::
 
    {
-     "job_id" : "04efe8e2-9255-44ae-a98b-d87cae411890"
+     "job_id" : "3711e2ad-5787-49bc-a47f-3f0b066af9f5"
    }
 
 Status Codes

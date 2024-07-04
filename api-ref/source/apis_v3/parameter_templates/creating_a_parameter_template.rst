@@ -13,7 +13,7 @@ This API is used to create a parameter template and configure the name, descript
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 The new parameter template cannot have the same name as any existing parameter template.
 
@@ -40,7 +40,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
@@ -54,24 +54,24 @@ Request Parameters
    +-------------+-----------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | values      | No        | Map<String,String>                                                                               | Parameter values defined by users based on a default parameter template. Keep the parameter values unchanged by default.                                                             |
    +-------------+-----------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | datastore   | Yes       | :ref:`ConfigurationDatastoreOption <nosql_06_0003__request_configurationdatastoreoption>` object | Database object                                                                                                                                                                      |
+   | datastore   | Yes       | :ref:`ConfigurationDatastoreOption <nosql_06_0003__request_configurationdatastoreoption>` object | Database object.                                                                                                                                                                     |
    +-------------+-----------+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _nosql_06_0003__request_configurationdatastoreoption:
 
 .. table:: **Table 4** ConfigurationDatastoreOption
 
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                 |
-   +=================+=================+=================+=============================================================================================+
-   | type            | Yes             | String          | Database type. The value can be:                                                            |
-   |                 |                 |                 |                                                                                             |
-   |                 |                 |                 | **cassandra**, indicating that the target instances are of the GaussDB(for Cassandra) type. |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+
-   | version         | Yes             | String          | Database version. The value can be:                                                         |
-   |                 |                 |                 |                                                                                             |
-   |                 |                 |                 | **3.11**, indicating that GaussDB(for Cassandra) 3.11 is supported.                         |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                      |
+   +=================+=================+=================+==================================================================================+
+   | type            | Yes             | String          | Database type. The value can be:                                                 |
+   |                 |                 |                 |                                                                                  |
+   |                 |                 |                 | **cassandra**, indicating that the instances are of the GeminiDB Cassandra type. |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------+
+   | version         | Yes             | String          | Database version. The value can be:                                              |
+   |                 |                 |                 |                                                                                  |
+   |                 |                 |                 | **3.11**, indicating that GeminiDB Cassandra 3.11 is supported.                  |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
@@ -80,11 +80,11 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +---------------+---------------------------------------------------------------------------------+--------------------------------+
-   | Parameter     | Type                                                                            | Description                    |
-   +===============+=================================================================================+================================+
-   | configuration | :ref:`ConfigurationResult <nosql_06_0003__response_configurationresult>` object | Parameter template information |
-   +---------------+---------------------------------------------------------------------------------+--------------------------------+
+   +---------------+---------------------------------------------------------------------------------+---------------------------------+
+   | Parameter     | Type                                                                            | Description                     |
+   +===============+=================================================================================+=================================+
+   | configuration | :ref:`ConfigurationResult <nosql_06_0003__response_configurationresult>` object | Parameter template information. |
+   +---------------+---------------------------------------------------------------------------------+---------------------------------+
 
 .. _nosql_06_0003__response_configurationresult:
 
@@ -93,13 +93,13 @@ Response Parameters
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
    | Parameter              | Type                  | Description                                                                                                |
    +========================+=======================+============================================================================================================+
-   | id                     | String                | Parameter template ID                                                                                      |
+   | id                     | String                | Parameter template ID.                                                                                     |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | name                   | String                | Parameter template name                                                                                    |
+   | name                   | String                | Parameter template name.                                                                                   |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | datastore_version_name | String                | Database version name                                                                                      |
+   | datastore_version_name | String                | Database version name.                                                                                     |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | datastore_name         | String                | Database name                                                                                              |
+   | datastore_name         | String                | Database name.                                                                                             |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
    | description            | String                | Parameter template description                                                                             |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
@@ -121,7 +121,7 @@ Example Requests
 
       POST https://{Endpoint}/v3/375d8d8fad1f43039e23d3b6c0f60a19/configurations
 
--  Creating a parameter template for GaussDB(for Cassandra) instances
+-  Creating a parameter template for GeminiDB Cassandra instances
 
    .. code-block::
 

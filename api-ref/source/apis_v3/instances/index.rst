@@ -14,6 +14,7 @@ Instances
 -  :ref:`Changing Specifications of an Instance <nosql_05_0100>`
 -  :ref:`Resetting the Administrator Password of an Instance <nosql_05_0101>`
 -  :ref:`Editing the Name of an Instance <nosql_05_0102>`
+-  :ref:`Changing the Security Group of an Instance <nosql_05_0103>`
 
 .. toctree::
    :maxdepth: 1
@@ -28,3 +29,4 @@ Instances
    changing_specifications_of_an_instance
    resetting_the_administrator_password_of_an_instance
    editing_the_name_of_an_instance
+   changing_the_security_group_of_an_instance

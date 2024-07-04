@@ -13,7 +13,7 @@ This API is used to apply a parameter template to one or more instances.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 This API is an asynchronous API. A successful response does not indicate that the parameter template is successfully applied.
 
@@ -29,7 +29,7 @@ PUT https://{Endpoint}/v3/{project_id}/configurations/{config_id}/apply
    +============+===========+========+================================================================================================================+
    | project_id | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | config_id  | Yes       | String | Parameter template ID                                                                                          |
+   | config_id  | Yes       | String | Parameter template ID.                                                                                         |
    +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -40,16 +40,16 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
 
-   ============ ========= ================ ============
+   ============ ========= ================ =============
    Parameter    Mandatory Type             Description
-   ============ ========= ================ ============
-   instance_ids Yes       Array of strings Instance IDs
-   ============ ========= ================ ============
+   ============ ========= ================ =============
+   instance_ids Yes       Array of strings Instance IDs.
+   ============ ========= ================ =============
 
 Response Parameters
 -------------------
@@ -61,7 +61,7 @@ Response Parameters
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                                                       |
    +=======================+=======================+===================================================================================================+
-   | job_id                | String                | ID of the asynchronous task that applies the parameter template                                   |
+   | job_id                | String                | ID of the asynchronous task that applies the parameter template.                                  |
    +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------+
    | success               | Boolean               | Whether the task for applying the parameter template is successfully submitted. The value can be: |
    |                       |                       |                                                                                                   |

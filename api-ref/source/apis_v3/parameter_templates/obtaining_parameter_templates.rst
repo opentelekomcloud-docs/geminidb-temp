@@ -13,7 +13,7 @@ This API is used to obtain parameter templates, including all of the default and
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -30,19 +30,19 @@ GET https://{Endpoint}/v3.1/{project_id}/configurations
 
 .. table:: **Table 2** Query parameters
 
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                                       |
-   +=================+=================+=================+===================================================================================================================================================================================================================================+
-   | offset          | No              | Integer         | Index offset.                                                                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                                                                   |
-   |                 |                 |                 | -  If **offset** is set to **N**, the resource query starts from the N+1 piece of data. If **action** is set to **filter**, **offset** is set to **0** by default, indicating that the query starts from the first piece of data. |
-   |                 |                 |                 | -  The value must be a positive integer.                                                                                                                                                                                          |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | limit           | No              | Integer         | Maximum number of instances that can be queried.                                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                                                                   |
-   |                 |                 |                 | -  The value ranges from **1** to **100**.                                                                                                                                                                                        |
-   |                 |                 |                 | -  If this parameter is not transferred, the first 100 records are queried by default.                                                                                                                                            |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                                              |
+   +=================+=================+=================+==========================================================================================================================================================================================================================+
+   | offset          | No              | Integer         | Index offset.                                                                                                                                                                                                            |
+   |                 |                 |                 |                                                                                                                                                                                                                          |
+   |                 |                 |                 | -  If **offset** is set to *N*, the resource query starts from the N+1 piece of data. If **action** is set to **filter**, **offset** is **0** by default, indicating that the query starts from the first piece of data. |
+   |                 |                 |                 | -  The value must be a positive integer.                                                                                                                                                                                 |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | limit           | No              | Integer         | Maximum number of instances that can be queried.                                                                                                                                                                         |
+   |                 |                 |                 |                                                                                                                                                                                                                          |
+   |                 |                 |                 | -  The value ranges from **1** to **100**.                                                                                                                                                                               |
+   |                 |                 |                 | -  If this parameter is not transferred, the first 100 records are queried by default.                                                                                                                                   |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -52,7 +52,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 Response Parameters
@@ -65,11 +65,11 @@ Response Parameters
    +----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
    | Parameter      | Type                                                                                                | Description                                                          |
    +================+=====================================================================================================+======================================================================+
-   | count          | Integer                                                                                             | Total number of records                                              |
+   | count          | Integer                                                                                             | Total number of records.                                             |
    +----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
    | quota          | Integer                                                                                             | Maximum number of custom parameter templates that a user can create. |
    +----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
-   | configurations | Array of :ref:`ListConfigurationsResult <nosql_06_0002__response_listconfigurationsresult>` objects | Parameter templates                                                  |
+   | configurations | Array of :ref:`ListConfigurationsResult <nosql_06_0002__response_listconfigurationsresult>` objects | Parameter templates.                                                 |
    +----------------+-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+
 
 .. _nosql_06_0002__response_listconfigurationsresult:
@@ -79,15 +79,15 @@ Response Parameters
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
    | Parameter              | Type                  | Description                                                                                                |
    +========================+=======================+============================================================================================================+
-   | id                     | String                | Parameter template ID                                                                                      |
+   | id                     | String                | Parameter template ID.                                                                                     |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | name                   | String                | Parameter template name                                                                                    |
+   | name                   | String                | Parameter template name.                                                                                   |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | description            | String                | Parameter template description                                                                             |
+   | description            | String                | Parameter template description.                                                                            |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | datastore_version_name | String                | Database version name                                                                                      |
+   | datastore_version_name | String                | Database version name.                                                                                     |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
-   | datastore_name         | String                | Database name                                                                                              |
+   | datastore_name         | String                | Database name.                                                                                             |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
    | created                | String                | Creation time in the yyyy-MM-ddTHH:mm:ssZ format.                                                          |
    |                        |                       |                                                                                                            |
@@ -99,7 +99,9 @@ Response Parameters
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
    | mode                   | String                | Instance type. The value can be:                                                                           |
    |                        |                       |                                                                                                            |
-   |                        |                       | **Cluster**, indicating that the instance is of the GaussDB(for Cassandra) cluster type.                   |
+   |                        |                       | **Cluster**, indicating that the instance is of the GeminiDB Cassandra cluster type.                       |
+   |                        |                       |                                                                                                            |
+   |                        |                       | **Cluster**, indicating that the instance is of the GeminiDB Influx cluster type.                          |
    +------------------------+-----------------------+------------------------------------------------------------------------------------------------------------+
    | user_defined           | Boolean               | Whether the parameter template is a custom template. The value can be:                                     |
    |                        |                       |                                                                                                            |

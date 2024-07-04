@@ -13,7 +13,7 @@ This API is used to delete an instance. Only pay-per-use instances can be delete
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -27,7 +27,7 @@ DELETE https://{Endpoint}/v3/{project_id}/instances/{instance_id}
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -38,7 +38,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 Response Parameters
@@ -51,7 +51,7 @@ Response Parameters
    ========= ====== ===========
    Parameter Type   Description
    ========= ====== ===========
-   job_id    String Task ID
+   job_id    String Task ID.
    ========= ====== ===========
 
 Example Requests

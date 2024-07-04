@@ -5,7 +5,7 @@
 Authentication
 ==============
 
-GaussDB NoSQL supports token-based authentication.
+GeminiDB supports token-based authentication.
 
 .. note::
 
@@ -14,6 +14,8 @@ GaussDB NoSQL supports token-based authentication.
 A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to a request to get permissions for calling the API.
 
 If you want to use a token for authentication, you need to obtain the user's token and add **X-Auth-Token** to the request header of the service API to make an API call.
+
+When you call an API to obtain a user token, set **auth.scope** in the request body to **project**.
 
 .. code-block:: text
 
