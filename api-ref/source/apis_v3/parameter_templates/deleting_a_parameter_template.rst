@@ -13,7 +13,7 @@ This API is used to delete a specified parameter template.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -27,7 +27,7 @@ DELETE https://{Endpoint}/v3/{project_id}/configurations/{config_id}
    +============+===========+========+================================================================================================================+
    | project_id | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | config_id  | Yes       | String | Parameter template ID                                                                                          |
+   | config_id  | Yes       | String | Parameter template ID.                                                                                         |
    +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -38,7 +38,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 Response Parameters

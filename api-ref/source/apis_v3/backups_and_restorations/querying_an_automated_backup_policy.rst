@@ -13,7 +13,7 @@ This API is used to query an automated backup policy.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -27,19 +27,19 @@ GET https://{Endpoint}/v3/{project_id}/instances/{instance_id}/backups/policy
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query parameters
 
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                       |
-   +=================+=================+=================+===================================================================================================+
-   | type            | No              | String          | Backup policy type. This parameter is available only to GaussDB(for Cassandra). The value can be: |
-   |                 |                 |                 |                                                                                                   |
-   |                 |                 |                 | -  **Instance**, indicating that an instance backup is queried.                                   |
-   |                 |                 |                 | -  **DatabaseTable**, indicating that a database or table backup is queried.                      |
-   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                   |
+   +=================+=================+=================+===============================================================================================+
+   | type            | No              | String          | Backup policy type. This parameter is available only to GeminiDB Cassandra. The value can be: |
+   |                 |                 |                 |                                                                                               |
+   |                 |                 |                 | -  **Instance**, indicating that an instance backup is queried.                               |
+   |                 |                 |                 | -  **DatabaseTable**, indicating that a database or table backup is queried.                  |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -49,26 +49,26 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 Response Parameters
 -------------------
 
-**Status code: 200**
+**Status code: 202**
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Type                  | Description                                                                                                                                                                   |
-   +=======================+=======================+===============================================================================================================================================================================+
-   | backup_policy         | object                | Backup policy objects, including backup retention period (days) and start time For details, see :ref:`Table 5 <nosql_api_0030__response_showbackuppolicyresult>`.             |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | database_tables       | Array of objects      | Database and table information in the backup. This parameter is available only to GaussDB(for Cassandra). For details, see :ref:`Table 6 <nosql_api_0030__table52261594347>`. |
-   |                       |                       |                                                                                                                                                                               |
-   |                       |                       | -  Keep this parameter empty or ignore it when you query an instance backup.                                                                                                  |
-   |                       |                       | -  Remember to specify this parameter when you query a database or table backup (if any).                                                                                     |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                                                                               |
+   +=======================+=======================+===========================================================================================================================================================================+
+   | backup_policy         | object                | Backup policy objects, including backup retention period (days) and start time For details, see :ref:`Table 5 <nosql_api_0030__response_showbackuppolicyresult>`.         |
+   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | database_tables       | Array of objects      | Database and table information in the backup. This parameter is available only to GeminiDB Cassandra. For details, see :ref:`Table 6 <nosql_api_0030__table52261594347>`. |
+   |                       |                       |                                                                                                                                                                           |
+   |                       |                       | -  Keep this parameter empty or ignore it when you query an instance backup.                                                                                              |
+   |                       |                       | -  Remember to specify this parameter when you query a database or table backup (if any).                                                                                 |
+   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _nosql_api_0030__response_showbackuppolicyresult:
 
@@ -77,7 +77,7 @@ Response Parameters
    +---------------------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter           | Type    | Description                                                                                                                                                                                                                                                                                                                                                             |
    +=====================+=========+=========================================================================================================================================================================================================================================================================================================================================================================+
-   | keep_days           | Integer | Backup retention days                                                                                                                                                                                                                                                                                                                                                   |
+   | keep_days           | Integer | Backup retention days.                                                                                                                                                                                                                                                                                                                                                  |
    +---------------------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | differential_period | String  | Differential backup interval. Interval for automatic differential backup. Its value can be **30**, **60**, **180**, **360**, **720**, or **1440**. The unit is minute. If the value is **0**, differential backup is disabled. Differential backup works based on incremental backup, and differential backup interval must be longer than incremental backup interval. |
    +---------------------+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -95,7 +95,7 @@ Response Parameters
    +-----------------------+-----------------------+-------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                 |
    +=======================+=======================+=============================================================+
-   | database_name         | String                | Database name                                               |
+   | database_name         | String                | Database name.                                              |
    +-----------------------+-----------------------+-------------------------------------------------------------+
    | table_names           | Array of strings      | Table names.                                                |
    |                       |                       |                                                             |
@@ -115,7 +115,7 @@ URI example
 Example Responses
 -----------------
 
-**Status code: 200**
+**Status code: 202**
 
 Success
 
@@ -143,12 +143,6 @@ Response when an automated backup policy is enabled
 Response when an automated backup policy is disabled
 
 .. code-block::
-
-   {
-     "backup_policy" : {
-       "keep_days" : 0
-     }
-   }
 
 Status Codes
 ------------

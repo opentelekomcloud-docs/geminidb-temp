@@ -2,8 +2,8 @@
 
 .. _topic_300000001:
 
-DB Engine Versions and Specifications
-=====================================
+Versions and Specifications
+===========================
 
 -  :ref:`Querying Version Information <nosql_database_version>`
 -  :ref:`Querying Instance Specifications <nosql_instance_specification>`

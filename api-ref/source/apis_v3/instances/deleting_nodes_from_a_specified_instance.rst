@@ -13,7 +13,7 @@ This API is used to delete nodes from a specified instance.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -27,7 +27,7 @@ POST https://{Endpoint}/v3/{project_id}/instances/{instance_id}/reduce-node
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -38,7 +38,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
@@ -48,7 +48,7 @@ Request Parameters
    +=================+=================+==================+==============================================================================================================================================================================================+
    | num             | No              | Integer          | Number of nodes to be deleted randomly.                                                                                                                                                      |
    |                 |                 |                  |                                                                                                                                                                                              |
-   |                 |                 |                  | For GaussDB(for Cassandra) instances, the value ranges **1** to **10**.                                                                                                                      |
+   |                 |                 |                  | For GeminiDB Cassandra instances, the value ranges from **1** to **10**.                                                                                                                     |
    |                 |                 |                  |                                                                                                                                                                                              |
    |                 |                 |                  | .. note::                                                                                                                                                                                    |
    |                 |                 |                  |                                                                                                                                                                                              |
@@ -60,7 +60,7 @@ Request Parameters
    |                 |                 |                  |                                                                                                                                                                                              |
    |                 |                 |                  |    -  Either **num** or **node_list** must be set.                                                                                                                                           |
    |                 |                 |                  |                                                                                                                                                                                              |
-   |                 |                 |                  |       -  If **node_list** is transferred, its value can contain 1 to 10 characters for GaussDB(for Cassandra).                                                                               |
+   |                 |                 |                  |       -  If **node_list** is transferred, its value can contain 1 to 10 characters for GeminiDB Cassandra.                                                                                   |
    |                 |                 |                  |       -  If **num** and **node_list** are both transferred, the value of **node_list** takes effect.                                                                                         |
    |                 |                 |                  |                                                                                                                                                                                              |
    |                 |                 |                  |    -  If **node_list** is empty, instance nodes are deleted randomly. If **node_list** is not empty, only the node whose ID is specified is deleted.                                         |

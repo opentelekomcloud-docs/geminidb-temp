@@ -13,7 +13,7 @@ This API is used to modify parameters in a specified parameter template, includi
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 The modified parameter template name must be different from the name of any existing or default parameter template.
 
@@ -33,7 +33,7 @@ PUT https://{Endpoint}/v3/{project_id}/configurations/{config_id}
    +============+===========+========+================================================================================================================+
    | project_id | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | config_id  | Yes       | String | Parameter template ID                                                                                          |
+   | config_id  | Yes       | String | Parameter template ID.                                                                                         |
    +------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -44,7 +44,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters

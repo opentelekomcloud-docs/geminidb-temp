@@ -5,7 +5,7 @@
 API Overview
 ============
 
-GaussDB NoSQL provides extended APIs. These APIs enable you to use some functions of GaussDB NoSQL.
+GeminiDB provides extended APIs. These APIs enable you to use some functions of GeminiDB.
 
 .. table:: **Table 1** API description
 

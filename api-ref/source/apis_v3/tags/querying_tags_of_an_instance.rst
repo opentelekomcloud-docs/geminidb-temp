@@ -13,7 +13,7 @@ This API is used to query tags of a specified instance.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 A maximum of 20 tags can be added to a DB instance. The tag key must be unique.
 
@@ -29,7 +29,7 @@ GET https://{Endpoint}/v3/{project_id}/instances/{instance_id}/tags
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -40,7 +40,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 Response Parameters
@@ -50,11 +50,11 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +-----------+----------------------------------------------------------------------------------------------------+----------------------+
-   | Parameter | Type                                                                                               | Description          |
-   +===========+====================================================================================================+======================+
-   | tags      | Array of :ref:`ListInstanceTagsResult <listinstancetags__response_listinstancetagsresult>` objects | Tags of the instance |
-   +-----------+----------------------------------------------------------------------------------------------------+----------------------+
+   +-----------+----------------------------------------------------------------------------------------------------+-----------------------+
+   | Parameter | Type                                                                                               | Description           |
+   +===========+====================================================================================================+=======================+
+   | tags      | Array of :ref:`ListInstanceTagsResult <listinstancetags__response_listinstancetagsresult>` objects | Tags of the instance. |
+   +-----------+----------------------------------------------------------------------------------------------------+-----------------------+
 
 .. _listinstancetags__response_listinstancetagsresult:
 

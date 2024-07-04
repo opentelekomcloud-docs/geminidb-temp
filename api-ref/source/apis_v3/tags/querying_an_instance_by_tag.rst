@@ -13,7 +13,7 @@ This API is used to query a specified instance by tag.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 A maximum of 20 tags can be added to a DB instance. The tag key must be unique.
 
@@ -38,7 +38,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
@@ -106,13 +106,13 @@ Response Parameters
 
 .. table:: **Table 6** Response body parameters
 
-   +-------------+-----------------------------------------------------------------------------------------------+-------------------------+
-   | Parameter   | Type                                                                                          | Description             |
-   +=============+===============================================================================================+=========================+
-   | instances   | Array of :ref:`InstanceResult <listinstancesbyresourcetags__response_instanceresult>` objects | All instances           |
-   +-------------+-----------------------------------------------------------------------------------------------+-------------------------+
-   | total_count | Integer                                                                                       | Total number of records |
-   +-------------+-----------------------------------------------------------------------------------------------+-------------------------+
+   +-------------+-----------------------------------------------------------------------------------------------+--------------------------+
+   | Parameter   | Type                                                                                          | Description              |
+   +=============+===============================================================================================+==========================+
+   | instances   | Array of :ref:`InstanceResult <listinstancesbyresourcetags__response_instanceresult>` objects | All instances.           |
+   +-------------+-----------------------------------------------------------------------------------------------+--------------------------+
+   | total_count | Integer                                                                                       | Total number of records. |
+   +-------------+-----------------------------------------------------------------------------------------------+--------------------------+
 
 .. _listinstancesbyresourcetags__response_instanceresult:
 
@@ -121,9 +121,9 @@ Response Parameters
    +---------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
    | Parameter     | Type                                                                                                | Description                                                                     |
    +===============+=====================================================================================================+=================================================================================+
-   | instance_id   | String                                                                                              | Instance ID                                                                     |
+   | instance_id   | String                                                                                              | Instance ID.                                                                    |
    +---------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
-   | instance_name | String                                                                                              | Instance name                                                                   |
+   | instance_name | String                                                                                              | Instance name.                                                                  |
    +---------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+
    | tags          | Array of :ref:`InstanceTagResult <listinstancesbyresourcetags__response_instancetagresult>` objects | All tags. If there are no tags, **tags** is taken as an empty array by default. |
    +---------------+-----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+

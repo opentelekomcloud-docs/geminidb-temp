@@ -13,7 +13,7 @@ This API is used to query version information of a specified type of instances.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -29,7 +29,7 @@ GET https://{Endpoint}/v3/{project_id}/datastores/{datastore_name}/versions
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+
    | datastore_name  | Yes             | String          | Database type. The value can be:                                                                               |
    |                 |                 |                 |                                                                                                                |
-   |                 |                 |                 | -  **cassandra**, indicating that the instances are of the GaussDB(for Cassandra) type.                        |
+   |                 |                 |                 | -  **cassandra**, indicating that the instances are of the GeminiDB Cassandra type.                            |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -55,7 +55,7 @@ Response Parameters
    +=======================+=======================+===============================================+
    | versions              | Array of strings      | Database version. The supported versions are: |
    |                       |                       |                                               |
-   |                       |                       | -  GaussDB(for Cassandra) instance 3.11       |
+   |                       |                       | -  GeminiDB Cassandra instance 3.11           |
    +-----------------------+-----------------------+-----------------------------------------------+
 
 Example Requests

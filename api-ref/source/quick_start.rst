@@ -5,7 +5,7 @@
 Quick Start
 ===========
 
-This section describes how to create a GaussDB NoSQL instance by calling APIs.
+This section describes how to create a GeminiDB Cassandra instance by calling APIs.
 
 .. note::
 
@@ -17,7 +17,7 @@ Involved APIs
 If you use a token for authentication, you must obtain the user's token and add **X-Auth-Token** to the request message header of the service API when making an API call.
 
 -  API for obtaining tokens from IAM
--  API for creating a GaussDB NoSQL instance
+-  API for creating a GeminiDB Cassandra instance
 
 Procedure
 ---------

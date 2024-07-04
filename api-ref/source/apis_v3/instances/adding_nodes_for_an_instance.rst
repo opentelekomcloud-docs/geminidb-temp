@@ -13,7 +13,7 @@ This API is used to add nodes for a specified instance.
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 URI
 ---
@@ -27,7 +27,7 @@ POST https://{Endpoint}/v3/{project_id}/instances/{instance_id}/enlarge-node
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -38,7 +38,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
@@ -46,11 +46,11 @@ Request Parameters
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                               |
    +=================+=================+=================+===========================================================================================================================+
-   | num             | Yes             | Integer         | Number of new nodes                                                                                                       |
+   | num             | Yes             | Integer         | Number of new nodes.                                                                                                      |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
    | subnet_id       | No              | String          | ID of the subnet where the new node is deployed.                                                                          |
    |                 |                 |                 |                                                                                                                           |
-   |                 |                 |                 | -  This parameter is transferred only when a new node is added to a GaussDB(for Cassandra) instance.                      |
+   |                 |                 |                 | -  This parameter can be transferred when nodes are added to the GeminiDB Cassandra database instances.                   |
    |                 |                 |                 | -  The transferred subnet ID must belong to the VPC where the current instance is deployed.                               |
    |                 |                 |                 | -  If this parameter is not transferred, the system will allocate a subnet with sufficient IP addresses for the new node. |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
@@ -65,7 +65,7 @@ Response Parameters
    ========= ====== ===========
    Parameter Type   Description
    ========= ====== ===========
-   job_id    String Task ID
+   job_id    String Task ID.
    ========= ====== ===========
 
 Example Requests

@@ -1,6 +1,6 @@
-=============================
-GaussDB NoSQL - API Reference
-=============================
+========================
+GeminiDB - API Reference
+========================
 
 .. toctree::
    :maxdepth: 1

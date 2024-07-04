@@ -13,7 +13,7 @@ This API is used to add tags to or delete tags from a specified DB instance in b
 Constraints
 -----------
 
-This API supports GaussDB(for Cassandra) instances.
+This API supports GeminiDB Cassandra instances.
 
 A maximum of 20 tags can be added to an instance. The tag key must be unique.
 
@@ -35,7 +35,7 @@ POST https://{Endpoint}/v3/{project_id}/instances/{instance_id}/tags/action
    +=============+===========+========+================================================================================================================+
    | project_id  | Yes       | String | Project ID of a tenant in a region. To obtain this value, see :ref:`Obtaining a Project ID <nosql_projectid>`. |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Instance ID                                                                                                    |
+   | instance_id | Yes       | String | Instance ID.                                                                                                   |
    +-------------+-----------+--------+----------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -46,7 +46,7 @@ Request Parameters
    ============ ========= ====== ===========
    Parameter    Mandatory Type   Description
    ============ ========= ====== ===========
-   X-Auth-Token Yes       String User token
+   X-Auth-Token Yes       String User token.
    ============ ========= ====== ===========
 
 .. table:: **Table 3** Request body parameters
@@ -59,7 +59,7 @@ Request Parameters
    |                 |                 |                                                                                                   | -  **create**, indicating that tags are added.   |
    |                 |                 |                                                                                                   | -  **delete**, indicating that tags are deleted. |
    +-----------------+-----------------+---------------------------------------------------------------------------------------------------+--------------------------------------------------+
-   | tags            | Yes             | Array of :ref:`BatchTagActionTagOption <batchtagaction__request_batchtagactiontagoption>` objects | All tags                                         |
+   | tags            | Yes             | Array of :ref:`BatchTagActionTagOption <batchtagaction__request_batchtagactiontagoption>` objects | All tags.                                        |
    +-----------------+-----------------+---------------------------------------------------------------------------------------------------+--------------------------------------------------+
 
 .. _batchtagaction__request_batchtagactiontagoption:
